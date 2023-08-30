@@ -11,4 +11,4 @@ docker run -d -e turn_server_ip=yourpublicIP --name rtccontainer  -p Portforwebr
 
 docker build -t turn_server ./turn
 
-docker run -d --name turncontainer  -p 3478:3478 turn_server
+docker run -d --name turncontainer  -p 3478:3478/tcp -p 3478:3478/udp turn_server
