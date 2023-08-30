@@ -1,3 +1,4 @@
+mkdir -p ./cert/
 touch ./cert/private.key
 touch ./cert/certificate.crt 
 
