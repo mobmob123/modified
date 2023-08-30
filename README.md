@@ -1,13 +1,17 @@
-# modified
-modified from webtutsplus/videoChat-WebFrontend
-author is webtutsplus
+# Video Chat Application
+* Deployed at https://desolate-depths-86299.herokuapp.com/
+* Only two persons can join in one room
+## Running the app on development server
+* `npm install`
+* `node index.js`
+* open `localhost:8000`
 
-one time use 1-1webrtc example
-
-docker build -t webrtc .
-
-docker run -d -e turn_server_ip=yourpublicIP --name rtccontainer  -p Portforwebrtc:8000 webrtc
-
-docker build -t turn_server ./turn
-
-docker run -d --name turncontainer  -p 3478:3478 turn_server
+## Obtaining TURN/STUN credentials using Xiysys
+* Do not use the credentials provided
+* Go to https://xirsys.com/
+* Sign Up 
+* Log in to your account
+* Click on `+` beside `MyFirstApp`
+* Click on `static TURN Credentials` Button located below `Account Type`.
+* Accept the warning by click on `+` that appears just after you clicked on `static TURN Credentials`.
+* Copy the text(begins with `iceservers`) that appears below `static TURN Credentials`  and paste in `config.js` as shown in `config.js`.
